@@ -7,7 +7,7 @@ tags: [string]
 cover: organizer
 excerpt: Oftentimes you might need to trim whitespace from a string in Python. Learn of three different way to do this in this short guide.
 listed: true
-dateModified: 2021-12-13
+dateModified: 2024-09-23
 ---
 
 When working with Python strings, a pretty common question is how to trim whitespace from a string. Whitespace characters are the space (` `), tab (`\t`), newline (`\n`), and carriage return characters (`\r`). Here are 3 different methods to trim whitespace from a string in Python.
@@ -34,4 +34,13 @@ Trailing whitespace characters are the whitespace characters at the end of a str
 
 ```py
 '  Hello  '.rstrip()   # '  Hello'
+```
+
+
+## Remove extra spaces between words
+To remove extra spaces between words and keep only single spaces, you can use the combination of `split()` and `join()` methods.
+
+```py
+text = "  Hello    World  1  "
+cleaned_text = ' '.join(text.split())  # 'Hello World 1'
 ```
